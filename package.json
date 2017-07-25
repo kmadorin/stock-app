@@ -1,0 +1,22 @@
+{
+  "name": "stock-app",
+  "version": "1.0.0",
+  "description": "Simple stock app",
+  "main": "stock.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kmadorin/stock-app.git"
+  },
+  "author": "Kirill Madorin",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kmadorin/stock-app/issues"
+  },
+  "homepage": "https://github.com/kmadorin/stock-app#readme",
+  "dependencies": {
+    "yargs": "^8.0.2"
+  }
+}
