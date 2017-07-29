@@ -9,6 +9,8 @@
 
 
 const fs = require('fs');
+const {ObjectId} = require('mongodb');
+
 const usersModule = require('./users');
 const tokensModule = require('./tokens');
 
@@ -25,7 +27,7 @@ var saveOffers = (offers) => {
   fs.writeFileSync('data/offers.json', JSON.stringify(offers));
 }
 
-var addOffer = (id, sellerId, tokenId, price) => {
+var addOffer = (sellerId, tokenId, price) => {
   //check if user owns this token
 
   var users = usersModule.getAll();
@@ -44,6 +46,7 @@ var addOffer = (id, sellerId, tokenId, price) => {
 
   if (seller) {
     var offers = fetchOffers();
+    var id = new ObjectId();
     var offer = {
       id: id,
       seller: sellerId,

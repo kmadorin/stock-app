@@ -60,7 +60,7 @@ var getAll = () => {
 var getUser = (id) => {
   var users = fetchUsers();
   var filteredUsers = users.filter((user) => user.id === id);
-  return filteredNotes[0];
+  return filteredUsers[0];
 }
 
 var buyToken = (userId) => {
@@ -79,12 +79,18 @@ var buyToken = (userId) => {
   return tokenToBuy;
 }
 
+var getTokensByUserId = (userId) => {
+  var user = getUser(userId);
+  return user.tokens;
+}
+
 
 
 module.exports = {
   addUser,
   getUser,
   buyToken,
-  getAll
+  getAll,
+  getTokensByUserId
 }
 

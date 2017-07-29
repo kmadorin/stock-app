@@ -17,6 +17,9 @@
   },
   "homepage": "https://github.com/kmadorin/stock-app#readme",
   "dependencies": {
+    "body-parser": "^1.17.2",
+    "express": "^4.15.3",
+    "mongodb": "^2.2.30",
     "yargs": "^8.0.2"
   }
 }
