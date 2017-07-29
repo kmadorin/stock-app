@@ -54,10 +54,10 @@ var addOffer = (sellerId, tokenId, price) => {
       price
     }
 
-    console.log(offer);
 
-    var duplicateOffers = offers.filter((offer) => offer.id === id);
 
+    var duplicateOffers = offers.filter((offer) => offer.token === tokenId);
+    console.log(duplicateOffers);
     if (duplicateOffers.length === 0) {
       offers.push(offer);
       saveOffers(offers);
